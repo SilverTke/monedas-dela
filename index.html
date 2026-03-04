@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>prueba</title>
+  </head>
+  <body>
+    <header class="flex justify-center items-center">
+        <h1 class="text-4xl">Conversor de monedas</h1>
+    </header>
+    <main class="flex justify-center items-center">
+        <div class="w-1/3 rounded-md bg-slate-500 p-4 flex flex-col gap-4">
+            <p class="label">Pesos</p>
+            <input type="number" id="quantity">
+            <p class="label">Moneda a convertir</p>
+            <select id="currency" class="bg-white rounded-md text-black p-4">
+                <option>Cargando</option>
+            </select>
+            <p class="text-3xl font-bold" id="result"></p>
+        </div>
+    </main>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

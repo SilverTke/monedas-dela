@@ -1,0 +1,36 @@
+/* @unocss-include */
+:root {
+    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+
+    color-scheme: light dark;
+    color: rgba(255, 255, 255, 0.87);
+    background-color: #242424;
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 6rem 1fr;
+}
+
+.label {
+    --at-apply: text-2xl font-bold;
+}
+
+input[type="number"] {
+    --at-apply: "p-2 rounded-md bg-white text-black outline-none border-none focus:outline-2 focus:outline-solid focus:outline-offset-2 focus:outline-indigo-200";
+    box-sizing: border-box;
+    appearance: textfield;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
