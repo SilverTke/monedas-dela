@@ -1,5 +1,6 @@
 import "virtual:uno.css";
 import "./style.css";
+import { setupChart } from "./chart";
 /**
  * @typedef {{codigo: string;nombre: string;unidad_medida: "Pesos";fecha: string;valor: number;}} Unit
  */
@@ -25,7 +26,7 @@ function getQuantity() {
   return quantityInput.valueAsNumber || 0;
 }
 
-function showError(err) {
+export function showError(err) {
   document.querySelector("#result").innerHTML =
     `Error obteniendo valores: ${err}`;
 }
@@ -77,6 +78,7 @@ function updateResult(unit, quantity) {
   const numFormat = Intl.NumberFormat("es-CL");
   document.querySelector("#result").innerHTML =
     `Resultado: ${numFormat.format(quantity / unit.valor)}`;
+  setupChart(unit.codigo).catch((e) => showError(e));
 }
 
 loadOptions();

@@ -10,7 +10,7 @@
     <header class="flex justify-center items-center">
         <h1 class="text-4xl">Conversor de monedas</h1>
     </header>
-    <main class="flex justify-center items-center">
+    <main class="flex flex-col justify-center items-center">
         <div class="w-1/3 rounded-md bg-slate-500 p-4 flex flex-col gap-4">
             <p class="label">Pesos</p>
             <input type="number" id="quantity">
@@ -20,6 +20,7 @@
             </select>
             <p class="text-3xl font-bold" id="result"></p>
         </div>
+        <div id="chart" class="w-2/3 h-128"></div>
     </main>
     <script type="module" src="/src/main.js"></script>
   </body>
