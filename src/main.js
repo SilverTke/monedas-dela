@@ -1,6 +1,6 @@
 import "virtual:uno.css";
-import "./style.css";
 import { setupChart } from "./chart";
+import "./style.css";
 /**
  * @typedef {{codigo: string;nombre: string;unidad_medida: "Pesos";fecha: string;valor: number;}} Unit
  */
@@ -45,9 +45,9 @@ async function loadOptions() {
     const { unit, quantity } = getUnit(currencySelect, units);
     updateResult(unit, quantity);
   });
-  /** @type {HTMLInputElement}*/ (
-    document.querySelector("#quantity")
-  ).addEventListener("change", (ev) => {
+  /** @type {HTMLButtonElement}*/ (
+    document.querySelector("#submit")
+  ).addEventListener("click", () => {
     const value = currencySelect.value;
     if (value) {
       const { unit, quantity } = getUnit(currencySelect, units);
