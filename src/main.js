@@ -41,10 +41,6 @@ async function loadOptions() {
   currencySelect.selectedIndex = 0;
   const { unit, quantity } = getUnit(currencySelect, units);
   updateResult(unit, quantity);
-  currencySelect.addEventListener("change", () => {
-    const { unit, quantity } = getUnit(currencySelect, units);
-    updateResult(unit, quantity);
-  });
   /** @type {HTMLButtonElement}*/ (
     document.querySelector("#submit")
   ).addEventListener("click", () => {
